@@ -308,7 +308,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:hue_6   = ['#d19a66', '173'] " orange 1
     let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
 
-    let s:syntax_bg     = ['#282c34', '16']
+    let s:syntax_bg     = ['#272c33', '235']
     let s:syntax_gutter = ['#636d83', '60']
     let s:syntax_cursor = ['#2c323c', '16']
 
@@ -854,6 +854,28 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
   " }}}
 
+  " Integrated terminal colors ----------------------------------------------{{{
+  if has('terminal')
+    let g:terminal_ansi_colors = [
+          \ s:syntax_bg[0],
+          \ s:hue_5[0],
+          \ s:hue_4[0],
+          \ s:hue_6_2[0],
+          \ s:hue_2[0],
+          \ s:hue_3[0],
+          \ s:hue_1[0],
+          \ s:mono_2[0],
+          \ s:mono_3[0],
+          \ s:hue_5[0],
+          \ s:hue_4[0],
+          \ s:hue_6_2[0],
+          \ s:hue_2[0],
+          \ s:hue_3[0],
+          \ s:hue_1[0],
+          \ s:syntax_fg[0],
+          \]
+  endif
+  " }}}
   " Delete functions =========================================================={{{
   " delf <SID>X
   " delf <SID>XAPI
