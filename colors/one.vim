@@ -840,6 +840,11 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
   " }}}
 
+  " DevIcon highlighting -------------------------------------------------------{{{
+  call <sid>X('DevIconRb', s:hue_5,    '', '')
+
+  " }}}
+
   " man highlighting --------------------------------------------------------{{{
   hi link manTitle String
   call <sid>X('manFooter', s:mono_3, '', '')
